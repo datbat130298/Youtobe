@@ -37,7 +37,7 @@ const InputSearch = () => {
         onFocus={handleFocusInput}
         onBlur={handleBlurInput}
         className={twMerge(
-          "h-2 px-2 text-[10px] outline-none bg-transparent w-60 group",
+          "h-2 px-2 text-xxs outline-none bg-transparent w-60 group",
           isShowFull && "pl-1"
         )}
         placeholder="Tìm kiếm"
