@@ -10,7 +10,7 @@ interface SidebarGroupProps {
 const SidebarGroup = ({ children, title, className }: SidebarGroupProps) => {
   return (
     <div className={twMerge("py-2 border-t border-gray-700", className)}>
-      {title && <p className="text-white text-xxs px-2">{title}</p>}
+      {title && <p className="text-white text-sm px-2">{title}</p>}
       {children}
     </div>
   );

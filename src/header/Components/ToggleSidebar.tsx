@@ -8,7 +8,7 @@ const ToggleSidebar = () => {
       tabIndex={0}
       onClick={() => null}
     >
-      <GrMenu size={9} className="mb-px" />
+      <GrMenu size={15} className="mb-px" />
     </div>
   );
 };

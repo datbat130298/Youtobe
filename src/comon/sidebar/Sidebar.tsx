@@ -18,38 +18,38 @@ import { IoSettingsOutline } from "react-icons/io5";
 
 const Sidebar = () => {
   return (
-    <div className="w-32 h-full px-2 overflow-hidden hover:overflow-auto">
+    <div className="w-48 h-full px-2 overflow-hidden hover:overflow-auto">
       <SidebarItem
         title="Trang chủ"
-        icon={<GoHome size={10} />}
+        icon={<GoHome size={16} />}
         onClick={() => null}
       />
       <SidebarItem
         title="Shorts"
-        icon={<SiYoutubeshorts size={9} />}
+        icon={<SiYoutubeshorts size={15} />}
         onClick={() => null}
         className=""
       />
       <SidebarItem
         title="Kênh đăng ký"
-        icon={<PiVideo size={10} />}
+        icon={<PiVideo size={16} />}
         onClick={() => null}
       />
       <SidebarGroup title="Bạn" className="mt-1">
         <>
           <SidebarItem
             title="Kênh của bạn"
-            icon={<BsPerson size={10} />}
+            icon={<BsPerson size={16} />}
             onClick={() => null}
           />
           <SidebarItem
             title="Video đa xem"
-            icon={<MdRestore size={10} />}
+            icon={<MdRestore size={16} />}
             onClick={() => null}
           />
           <SidebarItem
             title="Danh sách phát"
-            icon={<RiMenuFoldFill size={10} />}
+            icon={<RiMenuFoldFill size={16} />}
             onClick={() => null}
           />
         </>
@@ -58,17 +58,17 @@ const Sidebar = () => {
         <>
           <SidebarItem
             title="Nhà đẹp"
-            icon={<BsPerson size={10} />}
+            icon={<BsPerson size={16} />}
             onClick={() => null}
           />
           <SidebarItem
             title="Xe đẹp"
-            icon={<MdRestore size={10} />}
+            icon={<MdRestore size={16} />}
             onClick={() => null}
           />
           <SidebarItem
             title="Sức khỏe và dinh dưỡng"
-            icon={<RiMenuFoldFill size={10} />}
+            icon={<RiMenuFoldFill size={16} />}
             onClick={() => null}
           />
         </>
@@ -77,27 +77,27 @@ const Sidebar = () => {
         <>
           <SidebarItem
             title="Thịnh hành"
-            icon={<HiOutlineFire size={10} />}
+            icon={<HiOutlineFire size={16} />}
             onClick={() => null}
           />
           <SidebarItem
             title="Video đa xem"
-            icon={<LuMusic2 size={10} />}
+            icon={<LuMusic2 size={16} />}
             onClick={() => null}
           />
           <SidebarItem
             title="Trò chơi"
-            icon={<TbDeviceGamepad2 size={10} />}
+            icon={<TbDeviceGamepad2 size={16} />}
             onClick={() => null}
           />
           <SidebarItem
             title="Tin tức"
-            icon={<HiOutlineNewspaper size={10} />}
+            icon={<HiOutlineNewspaper size={16} />}
             onClick={() => null}
           />
           <SidebarItem
             title="Thể thao"
-            icon={<MdOutlineSportsFootball size={10} />}
+            icon={<MdOutlineSportsFootball size={16} />}
             onClick={() => null}
           />
         </>
@@ -106,17 +106,17 @@ const Sidebar = () => {
         <>
           <SidebarItem
             title="Cài đặt"
-            icon={<IoSettingsOutline size={10} />}
+            icon={<IoSettingsOutline size={16} />}
             onClick={() => null}
           />
           <SidebarItem
             title="Nhật ký báo cáo"
-            icon={<MdOutlinedFlag size={10} />}
+            icon={<MdOutlinedFlag size={16} />}
             onClick={() => null}
           />
           <SidebarItem
             title="Hỗ trợ"
-            icon={<MdHelpOutline size={10} />}
+            icon={<MdHelpOutline size={16} />}
             onClick={() => null}
           />
         </>

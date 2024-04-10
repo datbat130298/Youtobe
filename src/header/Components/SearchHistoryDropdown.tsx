@@ -7,9 +7,9 @@ const SearchHistoryDropdown = () => {
     "bông hpa đẹp nhất",
     "người tình mùa đông",
   ];
-  console.log(1);
+
   return (
-    <div className="absolute w-full z-10 top-5 px-1 bg-[#24252A] rounded-lg">
+    <div className="absolute w-full z-10 top-7 px-1 bg-[#24252A] rounded-lg">
       {data.map((item) => (
         <SeachHistoryItem data={item} key={item} />
       ))}
