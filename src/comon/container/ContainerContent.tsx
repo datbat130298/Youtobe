@@ -1,34 +1,21 @@
-import { useCallback, useEffect, useMemo } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 // import { getData } from "../../services/apiServices";
-import axios from "axios";
 import VideoItem from "./VideoItem";
 import ButtonFilter from "./ButtonFilter";
+import { getTrendingService } from "../../services/apiServices";
 
 const ContainerContent = () => {
-  // const [, setData] = useState();
+  const [dataTrending, setDataTrending] = useState([]);
 
-  const options = useMemo(() => {
-    return {
-      method: "GET",
-      url: "https://youtube-media-downloader.p.rapidapi.com/v2/playlist/videos",
-      params: {
-        playlistId: "PLeCdlPO-XhWFzEVynMsmosfdRsIZXhZi0",
-      },
-      headers: {
-        "X-RapidAPI-Key": "36319421ebmsh3284b091ae66d9ep11ddeajsnb52e7d7c62d4",
-        "X-RapidAPI-Host": "youtube-media-downloader.p.rapidapi.com",
-      },
-    };
-  }, []);
 
   const fetchData = useCallback(async () => {
     try {
-      const response = await axios.request(options);
-      console.log(response.data);
+      const response = await getTrendingService();
+      setDataTrending(response.data)
     } catch (error) {
       console.error(error);
     }
-  }, [options]);
+  }, []);
 
   useEffect(() => {
     fetchData();
@@ -39,14 +26,16 @@ const ContainerContent = () => {
   }, []);
 
   return (
-    <div className="flex-1">
+    <div className="flex-1 overflow-auto ">
       <div className="w-full flex gap-2">
         {filter.map((item) => (
           <ButtonFilter title={item} key={item} />
         ))}
       </div>
-      <div className="mt-6">
-        <VideoItem />
+      <div className="mt-6 flex flex-wrap justify-between gap-4">
+      {
+        dataTrending.length !== 0 && dataTrending.map((data) => <VideoItem data={data}/>)
+      }
       </div>
     </div>
   );

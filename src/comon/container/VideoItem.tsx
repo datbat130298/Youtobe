@@ -1,6 +1,10 @@
 import image from "../../assets/THU_5762.jpg";
 
-const VideoItem = () => {
+interface VideoItemProps {
+  data: any;
+}
+
+const VideoItem = ({data}: VideoItemProps) => {
   return (
     <div className="w-72">
       <img src={image} className="w-full h-40 rounded-md" alt="avatar" />

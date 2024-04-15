@@ -5,6 +5,7 @@ function App() {
   return (
     <DefaultLayout>
       <ComonRouter />
+
     </DefaultLayout>
   );
 }

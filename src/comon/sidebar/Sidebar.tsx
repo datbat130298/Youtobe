@@ -18,7 +18,7 @@ import { IoSettingsOutline } from "react-icons/io5";
 
 const Sidebar = () => {
   return (
-    <div className="w-48 h-full px-2 overflow-hidden hover:overflow-auto">
+    <div className="w-52 h-full px-2 overflow-hidden">
       <SidebarItem
         title="Trang chủ"
         icon={<GoHome size={16} />}
