@@ -11,6 +11,7 @@ export interface VideoDataType {
   channelTitle: string;
   channelThumbnail: ThumbnailDataType[];
 }
+export interface PlaylistDataType {}
 
 export interface ThumbnailDataType {
   url: string;

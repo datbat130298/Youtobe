@@ -2,8 +2,10 @@ import { useCallback, useEffect, useMemo, useState } from "react";
 // import { getData } from "../../services/apiServices";
 import VideoItem from "./VideoItem";
 import ButtonFilter from "./ButtonFilter";
-import { getTrendingService } from "../../services/apiServices";
+import { getHomeFeedService } from "../../services/apiServices";
 import VideoSkeleton from "./VideoSkeleton";
+import { DataTypeEnum } from "../../types/EnumData";
+import { VideoDataType } from "../../types/DataTypes";
 
 const ContainerContent = () => {
   const [dataTrending, setDataTrending] = useState([]);
@@ -12,8 +14,13 @@ const ContainerContent = () => {
   const fetchData = useCallback(async () => {
     setIsLoading(true);
     try {
-      const response = await getTrendingService();
-      setDataTrending(response.data.slice(1, 10));
+      const response = await getHomeFeedService();
+
+      setDataTrending(
+        response?.data?.filter(
+          (data: VideoDataType) => data.type === DataTypeEnum.VIDEO
+        )
+      );
     } catch (error) {
       console.error(error);
     } finally {
