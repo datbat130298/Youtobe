@@ -19,11 +19,11 @@ const VideoItem = ({
     }
     return "";
   };
-  console.log(data);
+
   return (
     <div
       className={twMerge(
-        "col-span-1 flex flex-col",
+        " flex flex-col row-span-1 col-span-1",
         className,
         type === VideoContainerTypeEnum.ROW && "flex-row gap-6"
       )}
@@ -32,7 +32,7 @@ const VideoItem = ({
         <img
           src={data.thumbnail?.[0].url}
           className={twMerge(
-            "w-full h-40 rounded-md",
+            "rounded-md",
             type === VideoContainerTypeEnum.ROW && "h-56 shrink-0"
           )}
           alt="avatar"

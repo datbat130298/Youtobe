@@ -8,3 +8,7 @@ export enum VideoContainerTypeEnum {
   ROW = "row",
   COL = "col",
 }
+
+export enum ShortTypeEnum {
+  SHORT = "short",
+}
